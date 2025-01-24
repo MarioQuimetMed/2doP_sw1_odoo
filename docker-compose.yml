@@ -1,0 +1,31 @@
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+      POSTGRES_DB: odoo
+    ports:
+      - "5432:5432"
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data
+
+  odoo:
+    image: odoo:17
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    volumes:
+      - ./odoo-addons:/mnt/extra-addons
+      - odoo-data:/var/lib/odoo # Agrega este volumen para persistir el filestore
+    environment:
+      HOST: db
+      USER: odoo
+      PASSWORD: odoo
+    restart: always
+    command: odoo --dev=all
+
+volumes:
+  odoo-db-data:
+  odoo-data: # Volumen para persistir los datos de Odoo
