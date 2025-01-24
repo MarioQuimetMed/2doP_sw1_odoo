@@ -1,0 +1,51 @@
+<odoo>
+    <!-- Acción para abrir las vistas de los tutores -->
+    <record id="action_tutores" model="ir.actions.act_window">
+        <field name="name">Tutores</field>
+        <field name="res_model">school.usuario</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('id_rol.descripcion', '=', 'Tutor')]</field>
+        <field name="context">{'default_id_rol': 4}</field>
+    </record>
+
+    <!-- Vista de lista (tree) para los tutores -->
+    <record id="view_tree_tutores" model="ir.ui.view">
+        <field name="name">Tutores Tree</field>
+        <field name="model">school.usuario</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="correo" />
+                <field name="ci" />
+                <field name="id_rol" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario (form) para los tutores -->
+    <record id="view_form_tutores" model="ir.ui.view">
+        <field name="name">Tutores Form</field>
+        <field name="model">school.usuario</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <!-- Información del Tutor -->
+                    <group>
+                        <field name="correo" />
+                        <field name="ci" />
+                        <field name="id_rol" invisible="1" readonly="1" />
+                    </group>
+
+                    <!-- Estudiantes asignados al Tutor -->
+                    <group string="Estudiantes a Cargo">
+                        <field name="tutoria_ids" context="{'default_id_usuario_tutor': active_id}">
+                            <tree editable="bottom">
+                                <field name="id_usuario_estudiante"
+                                    domain="[('id_rol.descripcion', '=', 'Estudiante')]" />
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

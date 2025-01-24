@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="rol_administrador" model="school.rol">
+        <field name="descripcion">Administrador</field>
+    </record>
+    <record id="rol_docente" model="school.rol">
+        <field name="descripcion">Docente</field>
+    </record>
+    <record id="rol_alumno" model="school.rol">
+        <field name="descripcion">Alumno</field>
+    </record>
+    <record id="rol_tutor" model="school.rol">
+        <field name="descripcion">Tutor</field>
+    </record>
+</odoo>

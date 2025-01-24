@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_school_usuario,access_school_usuario,model_school_usuario,base.group_user,1,1,1,1
+access_school_rol,access_school_rol,model_school_rol,base.group_user,1,1,0,0
+access_school_comunicado,access_school_comunicado,model_school_comunicado,base.group_user,1,1,1,0
+access_school_agenda,access_school_agenda,model_school_agenda,base.group_user,1,1,1,0
+access_school_tutoria,access_school_tutoria,model_school_tutoria,base.group_user,1,1,1,0
+access_school_grado,access_school_grado,model_school_grado,base.group_user,1,1,0,0
+access_school_paralelo,access_school_paralelo,model_school_paralelo,base.group_user,1,1,1,1
+access_school_curso,access_school_curso,model_school_curso,base.group_user,1,1,1,0
+access_school_materia,access_school_materia,model_school_materia,base.group_user,1,1,0,0
+access_school_horario_dia,access_school_horario_dia,model_school_horario_dia,base.group_user,1,1,1,0
+access_school_boleta,access_school_boleta,model_school_boleta,base.group_user,1,1,1,0
+access_school_asistencia,access_school_asistencia,model_school_asistencia,base.group_user,1,1,1,0

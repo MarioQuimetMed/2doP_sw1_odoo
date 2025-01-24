@@ -1,0 +1,40 @@
+<odoo>
+    <record id="action_usuarios" model="ir.actions.act_window">
+        <field name="name">Usuarios</field>
+        <field name="res_model">school.usuario</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_tree_usuarios" />
+        <field name="domain">[]</field>
+    </record>
+
+
+    <!-- Vista de lista (tree) para el modelo school.usuario -->
+    <record id="view_tree_usuarios" model="ir.ui.view">
+        <field name="name">Usuarios Tree</field>
+        <field name="model">school.usuario</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="correo" />
+                <field name="ci" />
+                <field name="id_rol" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario (form) para el modelo school.usuario -->
+    <record id="view_form_usuarios" model="ir.ui.view">
+        <field name="name">Usuarios Form</field>
+        <field name="model">school.usuario</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="correo" />
+                        <field name="ci" />
+                        <field name="id_rol" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

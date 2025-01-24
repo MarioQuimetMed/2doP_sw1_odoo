@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Root Menu -->
+    <menuitem id="menu_school_root" name="Escuela" sequence="1" />
+
+    <!-- Submenu: Usuarios -->
+    <menuitem id="menu_school_usuarios" name="Usuarios" parent="menu_school_root" sequence="10" />
+    <menuitem id="menu_school_usuarios_action" name="Gestión de Usuarios"
+        parent="menu_school_usuarios" action="action_usuarios" sequence="10" />
+
+
+    <!-- Submenu: Tutores -->
+    <menuitem id="menu_school_tutor" name="Tutores" parent="menu_school_root" sequence="10" />
+    <menuitem id="menu_school_tutores_action" name="Tutores"
+        parent="menu_school_tutor" action="action_tutores" sequence="20" />
+
+
+    <!-- Submenu: Roles -->
+    <menuitem id="menu_school_academico" name="Academico" parent="menu_school_root" sequence="20" />
+    <menuitem id="menu_school_roles_action" name="Gestión de Roles"
+        parent="menu_school_academico" action="action_roles" sequence="10" />
+    <menuitem id="menu_school_grados_action" name="Gestión de Grados"
+        parent="menu_school_academico" action="action_grados" sequence="10" />
+    <menuitem id="menu_school_paralelos_action" name="Gestión de Paralelos"
+        parent="menu_school_academico" action="action_paralelos" sequence="10" />
+
+
+</odoo>

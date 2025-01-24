@@ -1,0 +1,38 @@
+<odoo>
+    <record id="grado_1_primaria" model="school.grado">
+        <field name="name">1ro de Primaria</field>
+    </record>
+    <record id="grado_2_primaria" model="school.grado">
+        <field name="name">2do de Primaria</field>
+    </record>
+    <record id="grado_3_primaria" model="school.grado">
+        <field name="name">3ro de Primaria</field>
+    </record>
+    <record id="grado_4_primaria" model="school.grado">
+        <field name="name">4to de Primaria</field>
+    </record>
+    <record id="grado_5_primaria" model="school.grado">
+        <field name="name">5to de Primaria</field>
+    </record>
+    <record id="grado_6_primaria" model="school.grado">
+        <field name="name">6to de Primaria</field>
+    </record>
+    <record id="grado_1_secundaria" model="school.grado">
+        <field name="name">1ro de Secundaria</field>
+    </record>
+    <record id="grado_2_secundaria" model="school.grado">
+        <field name="name">2do de Secundaria</field>
+    </record>
+    <record id="grado_3_secundaria" model="school.grado">
+        <field name="name">3ro de Secundaria</field>
+    </record>
+    <record id="grado_4_secundaria" model="school.grado">
+        <field name="name">4to de Secundaria</field>
+    </record>
+    <record id="grado_5_secundaria" model="school.grado">
+        <field name="name">5to de Secundaria</field>
+    </record>
+    <record id="grado_6_secundaria" model="school.grado">
+        <field name="name">6to de Secundaria</field>
+    </record>
+</odoo>
