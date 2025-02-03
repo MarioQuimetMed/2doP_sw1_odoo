@@ -1,0 +1,52 @@
+<odoo>
+    <!-- Vista de lista (tree) para el modelo school.alumno -->
+    <record id="view_tree_alumnos" model="ir.ui.view">
+        <field name="name">Alumnos Tree</field>
+        <field name="model">school.alumno</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre" />
+                <field name="apellido_paterno" />
+                <field name="apellido_materno" />
+                <field name="ci" />
+                <field name="correo" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario (form) para el modelo school.alumno -->
+    <record id="view_form_alumnos" model="ir.ui.view">
+        <field name="name">Alumnos Form</field>
+        <field name="model">school.alumno</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="nombre" />
+                        <field name="apellido_paterno" />
+                        <field name="apellido_materno" />
+                        <field name="ci" />
+                        <field name="correo" />
+                    </group>
+                    <group>
+                        <field name="boleta_ids">
+                            <tree editable="bottom">
+                                <field name="id_curso" />
+                                <field name="periodo" />
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista de alumnos -->
+    <record id="action_alumnos" model="ir.actions.act_window">
+        <field name="name">Alumnos</field>
+        <field name="res_model">school.alumno</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_tree_alumnos" />
+    </record>
+
+</odoo>

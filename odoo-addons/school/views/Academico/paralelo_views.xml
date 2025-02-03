@@ -12,7 +12,7 @@
         <field name="model">school.paralelo</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="letra" />
+                <field name="name" />
             </tree>
         </field>
     </record>
@@ -25,7 +25,7 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="letra" />
+                        <field name="name" />
                     </group>
                 </sheet>
             </form>

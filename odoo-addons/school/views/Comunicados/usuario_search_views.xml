@@ -1,0 +1,43 @@
+<odoo>
+
+    <!-- Vista tree para mostrar más campos de school.usuario -->
+    <record id="view_tree_destinatarios" model="ir.ui.view">
+        <field name="name">Destinatarios Tree</field>
+        <field name="model">school.usuario</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="apellido_paterno"/>
+                <field name="apellido_materno"/>
+                <field name="correo"/>
+                <field name="curso_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de búsqueda personalizada para destinatarios -->
+    <record id="view_search_destinatarios" model="ir.ui.view">
+        <field name="name">Usuarios Search</field>
+        <field name="model">school.usuario</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="nombre" string="Nombre" />
+                <field name="apellido_paterno" string="Apellido Paterno" />
+                <field name="apellido_materno" string="Apellido Materno" />
+                <field name="correo" string="Correo" />
+                <field name="curso_id" string="Curso" />
+                <field name="tipo_usuario" string="Tipo de Usuario" />
+
+                <!-- Filtros personalizados -->
+                <filter name="filter_docentes" string="Docentes"
+                    domain="[('tipo_usuario', '=', 'docente')]" />
+                <filter name="filter_tutores" string="Tutores"
+                    domain="[('tipo_usuario', '=', 'tutor')]" />
+                <filter name="filter_alumnos" string="Alumnos"
+                    domain="[('tipo_usuario', '=', 'alumno')]" />
+                <filter name="filter_alumnos_curso" string="Alumnos por Curso"
+                    domain="[('tipo_usuario', '=', 'alumno')]" context="{'group_by': 'curso_id'}" />
+            </search>
+        </field>
+    </record>
+</odoo>

@@ -5,24 +5,43 @@
 
     <!-- Submenu: Usuarios -->
     <menuitem id="menu_school_usuarios" name="Usuarios" parent="menu_school_root" sequence="10" />
-    <menuitem id="menu_school_usuarios_action" name="Gestión de Usuarios"
-        parent="menu_school_usuarios" action="action_usuarios" sequence="10" />
-
-
+    <!-- Submenu: Administradores -->
+    <menuitem id="menu_school_usuarios_action" name="Administradores"
+        parent="menu_school_usuarios" action="action_administradores" sequence="10" />
+    <!-- Submenu: Docentes -->
+    <menuitem id="menu_school_docentes_action" name="Docentes"
+        parent="menu_school_usuarios" action="action_docentes" sequence="20" />
+    <!-- Submenu: Alumnos -->
+    <menuitem id="menu_school_alumnos_action" name="Alumnos"
+        parent="menu_school_usuarios" action="action_alumnos" sequence="20" />
     <!-- Submenu: Tutores -->
-    <menuitem id="menu_school_tutor" name="Tutores" parent="menu_school_root" sequence="10" />
     <menuitem id="menu_school_tutores_action" name="Tutores"
-        parent="menu_school_tutor" action="action_tutores" sequence="20" />
+        parent="menu_school_usuarios" action="action_tutores" sequence="20" />
 
 
-    <!-- Submenu: Roles -->
+    <!-- Submenu: Academico -->
     <menuitem id="menu_school_academico" name="Academico" parent="menu_school_root" sequence="20" />
-    <menuitem id="menu_school_roles_action" name="Gestión de Roles"
-        parent="menu_school_academico" action="action_roles" sequence="10" />
+    <!-- submenu: Grados -->
     <menuitem id="menu_school_grados_action" name="Gestión de Grados"
         parent="menu_school_academico" action="action_grados" sequence="10" />
+    <!-- Submenu Paralelos -->
     <menuitem id="menu_school_paralelos_action" name="Gestión de Paralelos"
         parent="menu_school_academico" action="action_paralelos" sequence="10" />
+    <!-- Submenu Materias -->
+    <menuitem id="menu_school_materias_action" name="Gestión de Materias"
+        parent="menu_school_academico" action="action_materias" sequence="10" />
+    <!-- Submenu Cursos -->
+    <menuitem id="menu_school_cursos_action" name="Gestión de Cursos"
+        parent="menu_school_academico" action="action_cursos" sequence="10" />
+    <!-- Submenu Horarios -->
+    <menuitem id="menu_school_horarios_action" name="Gestión de Horarios"
+        parent="menu_school_academico" action="action_horarios" sequence="10" />
+
+    <!-- Submenu: Comunicado -->
+    <menuitem id="menu_school_comunicado" name="Comunicados" parent="menu_school_root" sequence="20" />
+    <!-- submenu: Grados -->
+    <menuitem id="menu_school_comunicado_action" name="Gestión de Comunicados"
+        parent="menu_school_comunicado" action="action_comunicados" sequence="10" />
 
 
 </odoo>

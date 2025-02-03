@@ -1,0 +1,54 @@
+<odoo>
+    <!-- Vista de lista (tree) para el modelo school.docente -->
+    <record id="view_tree_docentes" model="ir.ui.view">
+        <field name="name">Docentes Tree</field>
+        <field name="model">school.docente</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre" />
+                <field name="apellido_paterno" />
+                <field name="apellido_materno" />
+                <field name="ci" />
+                <field name="correo" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario (form) para el modelo school.docente -->
+    <record id="view_form_docentes" model="ir.ui.view">
+        <field name="name">Docentes Form</field>
+        <field name="model">school.docente</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="nombre" />
+                        <field name="apellido_paterno" />
+                        <field name="apellido_materno" />
+                        <field name="ci" />
+                        <field name="correo" />
+                    </group>
+                    <group>
+                        <field name="horario_ids">
+                            <tree editable="bottom">
+                                <field name="dia" />
+                                <field name="hora_inicio" />
+                                <field name="hora_fin" />
+                                <field name="id_curso" />
+                                <field name="id_materia" />
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista de docentes -->
+    <record id="action_docentes" model="ir.actions.act_window">
+        <field name="name">Docentes</field>
+        <field name="res_model">school.docente</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_tree_docentes" />
+    </record>
+</odoo>

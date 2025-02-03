@@ -1,8 +1,8 @@
 <odoo>
     <record id="paralelo_a" model="school.paralelo">
-        <field name="letra">A</field>
+        <field name="name">A</field>
     </record>
     <record id="paralelo_b" model="school.paralelo">
-        <field name="letra">B</field>
+        <field name="name">B</field>
     </record>
 </odoo>

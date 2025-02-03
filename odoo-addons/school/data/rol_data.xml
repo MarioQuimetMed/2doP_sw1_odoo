@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo noupdate="1">
-    <record id="rol_administrador" model="school.rol">
-        <field name="descripcion">Administrador</field>
+<odoo>
+    <record id="group_alumno" model="res.groups">
+        <field name="name">Alumno</field>
     </record>
-    <record id="rol_docente" model="school.rol">
-        <field name="descripcion">Docente</field>
+    <record id="group_tutor" model="res.groups">
+        <field name="name">Tutor</field>
     </record>
-    <record id="rol_alumno" model="school.rol">
-        <field name="descripcion">Alumno</field>
+    <record id="group_docente" model="res.groups">
+        <field name="name">Docente</field>
     </record>
-    <record id="rol_tutor" model="school.rol">
-        <field name="descripcion">Tutor</field>
+    <record id="group_admin" model="res.groups">
+        <field name="name">Administrador</field>
     </record>
 </odoo>

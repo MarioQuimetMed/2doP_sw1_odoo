@@ -1,0 +1,42 @@
+<odoo>
+    <!-- Vista de lista (tree) para el modelo school.administrador -->
+    <record id="view_tree_administradores" model="ir.ui.view">
+        <field name="name">Administradores Tree</field>
+        <field name="model">school.administrador</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre" />
+                <field name="correo" />
+                <field name="ci" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario (form) para el modelo school.administrador -->
+    <record id="view_form_administradores" model="ir.ui.view">
+        <field name="name">Administradores Form</field>
+        <field name="model">school.administrador</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="nombre" />
+                        <field name="apellido_paterno" />
+                        <field name="apellido_materno" />
+                        <field name="ci" />
+                        <field name="correo" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista de administradores -->
+    <record id="action_administradores" model="ir.actions.act_window">
+        <field name="name">Administradores</field>
+        <field name="res_model">school.administrador</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_tree_administradores" />
+    </record>
+
+</odoo>

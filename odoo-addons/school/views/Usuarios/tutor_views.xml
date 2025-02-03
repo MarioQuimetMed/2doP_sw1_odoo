@@ -1,46 +1,39 @@
 <odoo>
-    <!-- Acción para abrir las vistas de los tutores -->
+    <!-- Acción para abrir la vista de tutores -->
     <record id="action_tutores" model="ir.actions.act_window">
         <field name="name">Tutores</field>
-        <field name="res_model">school.usuario</field>
+        <field name="res_model">school.tutor</field>
         <field name="view_mode">tree,form</field>
-        <field name="domain">[('id_rol.descripcion', '=', 'Tutor')]</field>
-        <field name="context">{'default_id_rol': 4}</field>
     </record>
 
-    <!-- Vista de lista (tree) para los tutores -->
+    <!-- Vista de lista (tree) para el modelo school.tutor -->
     <record id="view_tree_tutores" model="ir.ui.view">
         <field name="name">Tutores Tree</field>
-        <field name="model">school.usuario</field>
+        <field name="model">school.tutor</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="correo" />
                 <field name="ci" />
-                <field name="id_rol" />
             </tree>
         </field>
     </record>
 
-    <!-- Vista de formulario (form) para los tutores -->
+    <!-- Vista de formulario (form) para el modelo school.tutor -->
     <record id="view_form_tutores" model="ir.ui.view">
         <field name="name">Tutores Form</field>
-        <field name="model">school.usuario</field>
+        <field name="model">school.tutor</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
-                    <!-- Información del Tutor -->
                     <group>
-                        <field name="correo" />
+                        <field name="nombre" />
+                        <field name="apellido_paterno" />
+                        <field name="apellido_materno" />
                         <field name="ci" />
-                        <field name="id_rol" invisible="1" readonly="1" />
-                    </group>
-
-                    <!-- Estudiantes asignados al Tutor -->
-                    <group string="Estudiantes a Cargo">
-                        <field name="tutoria_ids" context="{'default_id_usuario_tutor': active_id}">
+                        <field name="correo" />
+                        <field name="tutoria_ids">
                             <tree editable="bottom">
-                                <field name="id_usuario_estudiante"
-                                    domain="[('id_rol.descripcion', '=', 'Estudiante')]" />
+                                <field name="id_alumno" />
                             </tree>
                         </field>
                     </group>

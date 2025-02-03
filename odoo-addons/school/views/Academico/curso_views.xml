@@ -1,0 +1,38 @@
+<odoo>
+    <!-- Acción para abrir las vistas del modelo school.curso -->
+    <record id="action_cursos" model="ir.actions.act_window">
+        <field name="name">Cursos</field>
+        <field name="res_model">school.curso</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Vista de lista (tree) para el modelo school.curso -->
+    <record id="view_tree_cursos" model="ir.ui.view">
+        <field name="name">Cursos Tree</field>
+        <field name="model">school.curso</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="id_grado" />
+                <field name="id_paralelo" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario (form) para el modelo school.curso -->
+    <record id="view_form_cursos" model="ir.ui.view">
+        <field name="name">Cursos Form</field>
+        <field name="model">school.curso</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="id_grado" />
+                        <field name="id_paralelo" />
+                        <field name="name" readonly="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,44 @@
+<odoo>
+    <!-- Acción para abrir las vistas del modelo school.horario_dia -->
+    <record id="action_horarios" model="ir.actions.act_window">
+        <field name="name">Horarios</field>
+        <field name="res_model">school.horario_dia</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Vista de lista (tree) para el modelo school.horario_dia -->
+    <record id="view_tree_horarios" model="ir.ui.view">
+        <field name="name">Horarios Tree</field>
+        <field name="model">school.horario_dia</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="dia" />
+                <field name="hora_inicio" />
+                <field name="hora_fin" />
+                <field name="id_curso" />
+                <field name="id_materia" />
+                <field name="id_usuario_docente" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista de formulario (form) para el modelo school.horario_dia -->
+    <record id="view_form_horarios" model="ir.ui.view">
+        <field name="name">Horarios Form</field>
+        <field name="model">school.horario_dia</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="dia" />
+                        <field name="hora_inicio" />
+                        <field name="hora_fin" />
+                        <field name="id_curso" />
+                        <field name="id_materia" />
+                        <field name="id_usuario_docente" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

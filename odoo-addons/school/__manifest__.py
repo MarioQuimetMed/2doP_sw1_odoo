@@ -26,13 +26,28 @@ Funcionalidades muchas xd
         'data/rol_data.xml',
         'data/paralelo_data.xml',
         'data/grado_data.xml',
+        'data/sequence.xml',
+        'data/materia_data.xml',
+        'data/users_data.xml',
         'views/views.xml',
         'views/templates.xml',
-        'views/grado_views.xml',
-        'views/paralelo_views.xml',
-        'views/usuario_views.xml',
+        # -----------------------------------
+        'views/Academico/grado_views.xml',
+        'views/Academico/paralelo_views.xml',
+        'views/Academico/rol_views.xml',
+        'views/Academico/materia_views.xml',
+        'views/Academico/curso_views.xml',
+        'views/Academico/horario_views.xml',
+        # -----------------------------------
+        'views/Usuarios/usuarios_views.xml',
+        'views/Usuarios/administrador_views.xml',
         'views/Usuarios/tutor_views.xml',
-        'views/rol_views.xml',
+        'views/Usuarios/alumno_views.xml',
+        'views/Usuarios/docente_views.xml',
+        # -----------------------------------
+        'views/Comunicados/usuario_search_views.xml',
+        'views/Comunicados/Comunicado_views.xml',
+        # -----------------------------------
         'views/school_menu.xml',
         
     ],

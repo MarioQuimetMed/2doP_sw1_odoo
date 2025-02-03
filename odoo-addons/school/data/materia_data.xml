@@ -1,0 +1,26 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Datos de ejemplo para el modelo school.materia -->
+        <record id="materia_matematicas" model="school.materia">
+            <field name="name">Matemáticas</field>
+        </record>
+        <record id="materia_lenguaje" model="school.materia">
+            <field name="name">Lenguaje</field>
+        </record>
+        <record id="materia_ciencias" model="school.materia">
+            <field name="name">Ciencias</field>
+        </record>
+        <record id="materia_historia" model="school.materia">
+            <field name="name">Historia</field>
+        </record>
+        <record id="materia_geografia" model="school.materia">
+            <field name="name">Geografía</field>
+        </record>
+        <record id="materia_ingles" model="school.materia">
+            <field name="name">Inglés</field>
+        </record>
+        <record id="materia_educacion_fisica" model="school.materia">
+            <field name="name">Educación Física</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,86 @@
+<odoo>
+    <!-- Datos de Administradores -->
+    <record id="admin_1" model="school.administrador">
+        <field name="nombre">Juan</field>
+        <field name="apellido_paterno">Pérez</field>
+        <field name="apellido_materno">García</field>
+        <field name="correo">juan.perez@school.com</field>
+        <field name="password">admin123</field>
+    </record>
+    <record id="admin_2" model="school.administrador">
+        <field name="nombre">María</field>
+        <field name="apellido_paterno">López</field>
+        <field name="apellido_materno">Martínez</field>
+        <field name="correo">maria.lopez@school.com</field>
+        <field name="password">admin123</field>
+    </record>
+
+    <!-- Datos de Docentes -->
+    <record id="docente_1" model="school.docente">
+        <field name="nombre">Carlos</field>
+        <field name="apellido_paterno">Sánchez</field>
+        <field name="apellido_materno">Rodríguez</field>
+        <field name="correo">carlos.sanchez@school.com</field>
+        <field name="password">docente123</field>
+    </record>
+    <record id="docente_2" model="school.docente">
+        <field name="nombre">Ana</field>
+        <field name="apellido_paterno">Gómez</field>
+        <field name="apellido_materno">Fernández</field>
+        <field name="correo">ana.gomez@school.com</field>
+        <field name="password">docente123</field>
+    </record>
+
+    <!-- Datos de Tutores -->
+    <record id="tutor_1" model="school.tutor">
+        <field name="nombre">Luis</field>
+        <field name="apellido_paterno">Ramírez</field>
+        <field name="apellido_materno">Hernández</field>
+        <field name="correo">luis.ramirez@school.com</field>
+        <field name="password">tutor123</field>
+    </record>
+    <record id="tutor_2" model="school.tutor">
+        <field name="nombre">Laura</field>
+        <field name="apellido_paterno">Díaz</field>
+        <field name="apellido_materno">Pérez</field>
+        <field name="correo">laura.diaz@school.com</field>
+        <field name="password">tutor123</field>
+    </record>
+    <record id="tutor_3" model="school.tutor">
+        <field name="nombre">Yefferson</field>
+        <field name="apellido_paterno">Huarachi</field>
+        <field name="apellido_materno">Aleman</field>
+        <field name="correo">hiachi20@gmail.com</field>
+        <field name="password">1234</field>
+    </record>
+
+    <!-- Datos de Alumnos -->
+    <record id="alumno_1" model="school.alumno">
+        <field name="nombre">Pedro</field>
+        <field name="apellido_paterno">García</field>
+        <field name="apellido_materno">López</field>
+        <field name="correo">pedro.garcia@school.com</field>
+        <field name="password">alumno123</field>
+    </record>
+    <record id="alumno_2" model="school.alumno">
+        <field name="nombre">Sofía</field>
+        <field name="apellido_paterno">Martínez</field>
+        <field name="apellido_materno">González</field>
+        <field name="correo">sofia.martinez@school.com</field>
+        <field name="password">alumno123</field>
+    </record>
+    <record id="alumno_3" model="school.alumno">
+        <field name="nombre">Miguel</field>
+        <field name="apellido_paterno">Hernández</field>
+        <field name="apellido_materno">Ramírez</field>
+        <field name="correo">miguel.hernandez@school.com</field>
+        <field name="password">alumno123</field>
+    </record>
+    <record id="alumno_4" model="school.alumno">
+        <field name="nombre">Lucía</field>
+        <field name="apellido_paterno">Fernández</field>
+        <field name="apellido_materno">Sánchez</field>
+        <field name="correo">lucia.fernandez@school.com</field>
+        <field name="password">alumno123</field>
+    </record>
+</odoo>
