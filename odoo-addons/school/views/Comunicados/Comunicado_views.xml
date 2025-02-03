@@ -40,11 +40,6 @@
        }" />
 
                     </group>
-                    <footer>
-                        <button string="Enviar" type="object" name="enviar_comunicado"
-                            class="btn-primary" />
-                        <button string="Cancelar" class="btn-secondary" special="cancel" />
-                    </footer>
                 </sheet>
             </form>
         </field>

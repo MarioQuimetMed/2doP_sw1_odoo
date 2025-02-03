@@ -194,20 +194,30 @@ class Comunicado(models.Model):
 
     title = fields.Char(string="Título", required=True)
     description = fields.Text(string="Descripción")
-    emite_id = fields.Many2one('school.usuario', string="Emitido Por", required=True, 
-                               default=lambda self: self.env.user)
+    emite_id = fields.Many2one(
+        'school.usuario',
+        string="Emitido Por",
+        required=True,
+        default=lambda self: self.env.user
+    )
     destinatarios_ids = fields.Many2many('school.usuario', string="Destinatarios")
 
-    def enviar_comunicado(self):
-        if not self.destinatarios_ids:
-            raise ValidationError("Debe seleccionar al menos un destinatario antes de enviar el comunicado.")
-        
-        for destinatario in self.destinatarios_ids:
-            self.env['school.agenda'].create({
-                'id_comunicado': self.id,
-                'id_usuario': destinatario.id,
-                'leido': False,
-            })
+    @api.model_create_multi
+    def create(self, vals_list):
+        # 1) Crea los comunicados con la lógica base
+        records = super(Comunicado, self).create(vals_list)
+
+        # 2) Para cada comunicado recien creado, inserta las entradas en Agenda
+        for rec in records:
+            # Asegúrate de que existan destinatarios
+            if rec.destinatarios_ids:
+                for destinatario in rec.destinatarios_ids:
+                    self.env['school.agenda'].create({
+                        'id_comunicado': rec.id,
+                        'id_usuario': destinatario.id,
+                        'leido': False,
+                    })
+        return records
 
 
 # Modelo: Agenda

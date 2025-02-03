@@ -1,0 +1,81 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Horarios para el docente Carlos Sánchez -->
+        <record id="horario_1" model="school.horario_dia">
+            <field name="dia">lunes</field>
+            <field name="hora_inicio">8.0</field>
+            <field name="hora_fin">10.0</field>
+            <field name="id_curso" ref="curso_1_primaria_a" />
+            <field name="id_materia" ref="materia_matematicas" />
+            <field name="id_usuario_docente" ref="docente_1" />
+        </record>
+        <record id="horario_2" model="school.horario_dia">
+            <field name="dia">martes</field>
+            <field name="hora_inicio">10.0</field>
+            <field name="hora_fin">12.0</field>
+            <field name="id_curso" ref="curso_2_primaria_a" />
+            <field name="id_materia" ref="materia_lenguaje" />
+            <field name="id_usuario_docente" ref="docente_1" />
+        </record>
+        <record id="horario_3" model="school.horario_dia">
+            <field name="dia">miercoles</field>
+            <field name="hora_inicio">8.0</field>
+            <field name="hora_fin">10.0</field>
+            <field name="id_curso" ref="curso_3_primaria_a" />
+            <field name="id_materia" ref="materia_ciencias" />
+            <field name="id_usuario_docente" ref="docente_1" />
+        </record>
+
+        <!-- Horarios para la docente Ana Gómez -->
+        <record id="horario_4" model="school.horario_dia">
+            <field name="dia">lunes</field>
+            <field name="hora_inicio">10.0</field>
+            <field name="hora_fin">12.0</field>
+            <field name="id_curso" ref="curso_1_primaria_b" />
+            <field name="id_materia" ref="materia_historia" />
+            <field name="id_usuario_docente" ref="docente_2" />
+        </record>
+        <record id="horario_5" model="school.horario_dia">
+            <field name="dia">martes</field>
+            <field name="hora_inicio">8.0</field>
+            <field name="hora_fin">10.0</field>
+            <field name="id_curso" ref="curso_2_primaria_b" />
+            <field name="id_materia" ref="materia_geografia" />
+            <field name="id_usuario_docente" ref="docente_2" />
+        </record>
+        <record id="horario_6" model="school.horario_dia">
+            <field name="dia">miercoles</field>
+            <field name="hora_inicio">10.0</field>
+            <field name="hora_fin">12.0</field>
+            <field name="id_curso" ref="curso_3_primaria_b" />
+            <field name="id_materia" ref="materia_ingles" />
+            <field name="id_usuario_docente" ref="docente_2" />
+        </record>
+
+        <!-- Horarios para el docente Yefferson Huarachi -->
+        <record id="horario_7" model="school.horario_dia">
+            <field name="dia">jueves</field>
+            <field name="hora_inicio">8.0</field>
+            <field name="hora_fin">10.0</field>
+            <field name="id_curso" ref="curso_4_primaria_a" />
+            <field name="id_materia" ref="materia_educacion_fisica" />
+            <field name="id_usuario_docente" ref="docente_3" />
+        </record>
+        <record id="horario_8" model="school.horario_dia">
+            <field name="dia">viernes</field>
+            <field name="hora_inicio">10.0</field>
+            <field name="hora_fin">12.0</field>
+            <field name="id_curso" ref="curso_5_primaria_a" />
+            <field name="id_materia" ref="materia_matematicas" />
+            <field name="id_usuario_docente" ref="docente_3" />
+        </record>
+        <record id="horario_9" model="school.horario_dia">
+            <field name="dia">jueves</field>
+            <field name="hora_inicio">10.0</field>
+            <field name="hora_fin">12.0</field>
+            <field name="id_curso" ref="curso_6_primaria_a" />
+            <field name="id_materia" ref="materia_lenguaje" />
+            <field name="id_usuario_docente" ref="docente_3" />
+        </record>
+    </data>
+</odoo>

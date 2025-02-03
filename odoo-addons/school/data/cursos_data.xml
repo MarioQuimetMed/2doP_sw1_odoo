@@ -1,0 +1,103 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Cursos de Primaria -->
+        <record id="curso_1_primaria_a" model="school.curso">
+            <field name="id_grado" ref="grado_1_primaria" />
+            <field name="id_paralelo" ref="paralelo_a" />
+        </record>
+        <record id="curso_1_primaria_b" model="school.curso">
+            <field name="id_grado" ref="grado_1_primaria" />
+            <field name="id_paralelo" ref="paralelo_b" />
+        </record>
+        <record id="curso_2_primaria_a" model="school.curso">
+            <field name="id_grado" ref="grado_2_primaria" />
+            <field name="id_paralelo" ref="paralelo_a" />
+        </record>
+        <record id="curso_2_primaria_b" model="school.curso">
+            <field name="id_grado" ref="grado_2_primaria" />
+            <field name="id_paralelo" ref="paralelo_b" />
+        </record>
+        <record id="curso_3_primaria_a" model="school.curso">
+            <field name="id_grado" ref="grado_3_primaria" />
+            <field name="id_paralelo" ref="paralelo_a" />
+        </record>
+        <record id="curso_3_primaria_b" model="school.curso">
+            <field name="id_grado" ref="grado_3_primaria" />
+            <field name="id_paralelo" ref="paralelo_b" />
+        </record>
+        <record id="curso_4_primaria_a" model="school.curso">
+            <field name="id_grado" ref="grado_4_primaria" />
+            <field name="id_paralelo" ref="paralelo_a" />
+        </record>
+        <record id="curso_4_primaria_b" model="school.curso">
+            <field name="id_grado" ref="grado_4_primaria" />
+            <field name="id_paralelo" ref="paralelo_b" />
+        </record>
+        <record id="curso_5_primaria_a" model="school.curso">
+            <field name="id_grado" ref="grado_5_primaria" />
+            <field name="id_paralelo" ref="paralelo_a" />
+        </record>
+        <record id="curso_5_primaria_b" model="school.curso">
+            <field name="id_grado" ref="grado_5_primaria" />
+            <field name="id_paralelo" ref="paralelo_b" />
+        </record>
+        <record id="curso_6_primaria_a" model="school.curso">
+            <field name="id_grado" ref="grado_6_primaria" />
+            <field name="id_paralelo" ref="paralelo_a" />
+        </record>
+        <record id="curso_6_primaria_b" model="school.curso">
+            <field name="id_grado" ref="grado_6_primaria" />
+            <field name="id_paralelo" ref="paralelo_b" />
+        </record>
+
+        <!-- Cursos de Secundaria -->
+        <record id="curso_1_secundaria_a" model="school.curso">
+            <field name="id_grado" ref="grado_1_secundaria" />
+            <field name="id_paralelo" ref="paralelo_a" />
+        </record>
+        <record id="curso_1_secundaria_b" model="school.curso">
+            <field name="id_grado" ref="grado_1_secundaria" />
+            <field name="id_paralelo" ref="paralelo_b" />
+        </record>
+        <record id="curso_2_secundaria_a" model="school.curso">
+            <field name="id_grado" ref="grado_2_secundaria" />
+            <field name="id_paralelo" ref="paralelo_a" />
+        </record>
+        <record id="curso_2_secundaria_b" model="school.curso">
+            <field name="id_grado" ref="grado_2_secundaria" />
+            <field name="id_paralelo" ref="paralelo_b" />
+        </record>
+        <record id="curso_3_secundaria_a" model="school.curso">
+            <field name="id_grado" ref="grado_3_secundaria" />
+            <field name="id_paralelo" ref="paralelo_a" />
+        </record>
+        <record id="curso_3_secundaria_b" model="school.curso">
+            <field name="id_grado" ref="grado_3_secundaria" />
+            <field name="id_paralelo" ref="paralelo_b" />
+        </record>
+        <record id="curso_4_secundaria_a" model="school.curso">
+            <field name="id_grado" ref="grado_4_secundaria" />
+            <field name="id_paralelo" ref="paralelo_a" />
+        </record>
+        <record id="curso_4_secundaria_b" model="school.curso">
+            <field name="id_grado" ref="grado_4_secundaria" />
+            <field name="id_paralelo" ref="paralelo_b" />
+        </record>
+        <record id="curso_5_secundaria_a" model="school.curso">
+            <field name="id_grado" ref="grado_5_secundaria" />
+            <field name="id_paralelo" ref="paralelo_a" />
+        </record>
+        <record id="curso_5_secundaria_b" model="school.curso">
+            <field name="id_grado" ref="grado_5_secundaria" />
+            <field name="id_paralelo" ref="paralelo_b" />
+        </record>
+        <record id="curso_6_secundaria_a" model="school.curso">
+            <field name="id_grado" ref="grado_6_secundaria" />
+            <field name="id_paralelo" ref="paralelo_a" />
+        </record>
+        <record id="curso_6_secundaria_b" model="school.curso">
+            <field name="id_grado" ref="grado_6_secundaria" />
+            <field name="id_paralelo" ref="paralelo_b" />
+        </record>
+    </data>
+</odoo>

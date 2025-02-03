@@ -30,6 +30,13 @@
         <field name="correo">ana.gomez@school.com</field>
         <field name="password">docente123</field>
     </record>
+    <record id="docente_3" model="school.docente">
+        <field name="nombre">Yefferson</field>
+        <field name="apellido_paterno">Huarachi</field>
+        <field name="apellido_materno">Aleman</field>
+        <field name="correo">hiachi20@gmail.com</field>
+        <field name="password">1234</field>
+    </record>
 
     <!-- Datos de Tutores -->
     <record id="tutor_1" model="school.tutor">
@@ -45,13 +52,6 @@
         <field name="apellido_materno">Pérez</field>
         <field name="correo">laura.diaz@school.com</field>
         <field name="password">tutor123</field>
-    </record>
-    <record id="tutor_3" model="school.tutor">
-        <field name="nombre">Yefferson</field>
-        <field name="apellido_paterno">Huarachi</field>
-        <field name="apellido_materno">Aleman</field>
-        <field name="correo">hiachi20@gmail.com</field>
-        <field name="password">1234</field>
     </record>
 
     <!-- Datos de Alumnos -->
