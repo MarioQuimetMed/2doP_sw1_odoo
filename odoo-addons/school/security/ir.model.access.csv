@@ -14,3 +14,4 @@ access_school_materia,access_school_materia,model_school_materia,,1,1,1,1
 access_school_grado,access_school_grado,model_school_grado,,1,1,1,1
 access_school_paralelo,access_school_paralelo,model_school_paralelo,,1,1,1,1
 access_school_asistencia,access_school_asistencia,model_school_asistencia,,1,1,1,1
+access_school_firebase_notifier,access_school_firebase_notifier,model_school_firebase_notifier,,1,1,1,1

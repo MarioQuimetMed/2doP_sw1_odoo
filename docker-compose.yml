@@ -1,4 +1,5 @@
 services:
+  
   db:
     image: postgres:13
     environment:
@@ -25,7 +26,8 @@ services:
     volumes:
       - ./odoo-addons:/mnt/extra-addons
       - odoo-data:/var/lib/odoo
-    command: odoo -i base --db_host=db --db_user=odoo --db_password=odoo --database=odoo
+    command: >
+      bash -c "pip3 install --no-cache-dir firebase-admin google-auth && odoo -i base --db_host=db --db_user=odoo --db_password=odoo --database=odoo"
     restart: always
 
 volumes:

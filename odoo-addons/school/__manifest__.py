@@ -29,8 +29,8 @@ Funcionalidades muchas xd
         'data/cursos_data.xml',
         'data/sequence.xml',
         'data/materia_data.xml',
-        'data/horario_data.xml',
         'data/users_data.xml',
+        'data/horario_data.xml',
         'views/views.xml',
         'views/templates.xml',
         # -----------------------------------

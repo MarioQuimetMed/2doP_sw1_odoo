@@ -28,6 +28,7 @@ class Usuario(models.Model):
     apellido_paterno = fields.Char(string="Apellido Paterno", required=True)
     apellido_materno = fields.Char(string="Apellido Materno", required=True)
     nombre = fields.Char(string="Nombre", required=True)
+    fcm_token = fields.Char(string="Token de Notificación FCM", help="Token del dispositivo para recibir notificaciones push.")
 
     # Aquí la magia: en lugar de un compute propio, utilizamos un related
     # a 'curso_actual_id' de 'school.alumno'
@@ -209,15 +210,24 @@ class Comunicado(models.Model):
 
         # 2) Para cada comunicado recien creado, inserta las entradas en Agenda
         for rec in records:
-            # Asegúrate de que existan destinatarios
             if rec.destinatarios_ids:
-                for destinatario in rec.destinatarios_ids:
-                    self.env['school.agenda'].create({
-                        'id_comunicado': rec.id,
-                        'id_usuario': destinatario.id,
-                        'leido': False,
-                    })
+                rec.enviar_notificacion()
         return records
+
+    def enviar_notificacion(self):
+        """
+        Envía una notificación push a todos los destinatarios del comunicado.
+        """
+        firebase_notifier = self.env['school.firebase_notifier']
+
+        for destinatario in self.destinatarios_ids:
+            # Obtener el token de FCM del usuario (debes agregar este campo en el modelo Usuario)
+            if destinatario.fcm_token:
+                firebase_notifier.create({
+                    'title': self.title,
+                    'body': self.description,
+                    'token': destinatario.fcm_token
+                }).send_notification()
 
 
 # Modelo: Agenda
